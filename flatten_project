@@ -1,5 +1,15 @@
-import numpy as np
+not_flattened = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
 
-non_flattened_list = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+def flatten(n):
+    flattened = []
 
-print(list(np.concatenate(original_list). flat)
+    if(type(n) != list):
+        flattened.append(n)
+
+    else:
+        for x in n:
+            flattened += flatten(x)
+            
+    return flattened
+
+print(flatten(not_flattened))
