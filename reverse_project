@@ -1,1 +1,10 @@
+def reverse(x):
+    if isinstance(x, list):
+        x = [reverse(subx) for subx in x]
+        x = x[::-1]
+    elif isinstance(x, str):
+        x = x[::-1]
+    return x
 
+not_reversed_list = [[1, 2], [3, 4], [5, 6, 7]]
+not_reversed_list = reverse(not_reversed_list)
