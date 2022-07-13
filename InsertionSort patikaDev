@@ -1,1 +1,47 @@
+Proje 1
+[22,27,16,2,18,6] -> Insertion Sort
 
+Yukarı verilen dizinin sort türüne göre aşamalarını yazınız.
+Big-O gösterimini yazınız.
+Time Complexity: Average case: Aradığımız sayının ortada olması,Worst case: Aradığımız sayının sonda olması, Best case: Aradığımız sayının dizinin en başında olması.
+Dizi sıralandıktan sonra 18 sayısı hangi case kapsamına girer? Yazınız.
+
+
+[7,3,5,8,2,9,4,15,6] dizisinin Insertion Sort'a göre ilk 4 adımını yazınız.
+
+---------------------------------------------------------
+## AŞAMALAR ##
+
+[22,27,16,2,18,6] 
+ilk aşamada en küçük öğe bulunur ve en baştaki ile yer değiştirilir.
+[2,27,16,22,18,6]
+en küçük eleman 0. indexte olduğuna göre sıra 1. indexe geçer. [1]den başlayarak sona doğru tarama yapılşıp en küçük eleman yer değiştirilir.
+[2,7,16,22,18,27]
+şimdi 2 ve 7nin sıralı en küçükler olduğunu bildiğimiz için [2] den itibaren aramaya başlıyoruz.
+[2,7,16,22,18,27]
+arama yaparken farkediyoruz ki 16 zaten sıralı en küçük eleman, bu yüzden bir değişiklik yapmıyoruz. Sıra [3] indexinde
+[2,7,16,18,22,27]
+şimdi [4]indexe bakıyoruz
+ve listemizin sıralanmış olduğunu görüp insertion sort işlemlerini bitiriyoruz.
+
+
+
+
+## BIG-O NOTATION ##
+
+ilk aşamada n adet arama yaptığımız için n, bir sonraki işlemde 1 elemanın kesinlikle küçük olduğunu bildiğimiz için n-1... şeklinde +1 e kadar giden bir işlem var.
+yani 1'den n'e kadar olan sayıların toplamı
+
+n.(n+1)
+________               = n^2 + n / 2. big-o notationda domine eden işlem alınır yani  O(n^2) 
+2
+
+
+
+## TIME COMPLEXITY ##
+
+Best case = O(n)
+Average case = O(n^2)
+Worst case = O(n^2)
+
+## 18'i baz alarak yapılacak işlemde average case olacaktır ##
